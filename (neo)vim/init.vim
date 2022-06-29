@@ -11,12 +11,11 @@ set ignorecase
 nnoremap <CR> :noh<CR><CR>
 
 # GUI config
-set guifont=Consolas:h14
+set guifont=Consolas:h15
 
 # Plugins download
 call plug#begin()
-    # Color schemes
-    Plug 'sainnhe/gruvbox-material'
+	# Color schemes
 	Plug 'morhetz/gruvbox'
 
 	# Other plugins
@@ -33,3 +32,6 @@ colorscheme gruvbox
 autocmd VimEnter * NERDTree | wincmd p
 ## Close NERDTree split when it's the last split
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+# Neovide config
+let g:neovide_cursor_animation_length=0.05
